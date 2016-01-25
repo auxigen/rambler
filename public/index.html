@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <!-- build:css ../public/dist/lib.css -->
+        <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- endbuild -->
+        
+        <!-- build:js ../public/dist/lib.js -->
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-aria/angular-aria.js"></script>
+        <script src="node_modules/angular-animate/angular-animate.js"></script>
+        <script src="node_modules/angular-material/angular-material.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body ng-app="ramblerApp" ng-controller="mainCtrl" layout="row" ng-cloak>
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+            <md-toolbar md-whiteframe-z1 style="background-color: #edecec;"></md-toolbar>
+            <md-toolbar class="md-primary md-tall">
+                <h1 class="md-toolbar-tools"></h1>
+            </md-toolbar>
+            <md-content layout-padding>
+            </md-content>
+        </md-sidenav>
+        <div layout="column" flex>
+            <md-toolbar style="background-color: #edecec;">
+                <div class="md-toolbar-tools">
+                    <md-button class="md-icon-button" aria-label="Settings">
+                        <md-icon aria-label="email" class="material-icons">android</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-toolbar class="md-primary md-tall md-primary md-tall">
+                <div class="md-toolbar-tools">
+                    <md-button class="md-icon-button" aria-label="Settings">
+                        <md-icon aria-label="email" class="material-icons">android</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-content md-whiteframe-z1 class="md-padding content" layout="column">
+                <md-card ng-repeat="row in data">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{row.name}}</span>
+                            <span class="md-subhead">{{row.occupation}}</span>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-lg card-media">
+                                <img ng-src="{{row.profile}}"/>
+                            </div>
+                        </md-card-title-media>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button class="md-icon-button md-accent" aria-label="Settings">
+                            <md-icon aria-label="email" class="material-icons">book</md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button md-accent" aria-label="Settings">
+                            <md-icon aria-label="email" class="material-icons">chat</md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button md-accent" aria-label="Settings">
+                            <md-icon aria-label="email" class="material-icons">chevron_right</md-icon>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </md-content>
+        </div>
+        
+        <!--
+        
+-->
+    </body>
+    <!-- build:js ../public/dist/app.js -->
+    <script src="js/app.js"></script>
+    <script src="js/controller.main.js"></script>
+    <!-- endbuild -->      
+</html>
