@@ -1,0 +1,39 @@
+<md-toolbar class="info-card top-stats md-accent md-whiteframe-z1" layout="column">
+    <div flex layout="row" layout-align="space-around center">
+        <div class="top-stats-left" flex="50">
+            <h3>{{data.length}}</h3>
+            <p>Total</p>
+        </div>
+        <div flex="50">
+            <h3>1</h3>
+            <p>Today's Count</p>
+        </div>
+    </div>
+</md-toolbar>
+
+<md-card class="info-card" ng-repeat="row in data">
+    <md-card-title class="info-card-title">
+        <md-card-title-media class="info-card-title-media" layout-padding>
+            <div class="md-media-lg info-card-media">
+                <img ng-src="{{row.profile}}"/>
+            </div>
+        </md-card-title-media>
+        <md-card-title-text class="info-card-title-text">
+            <span class="md-headline">{{row.name}}</span>
+            <span class="md-subhead">{{row.occupation}}</span>
+            <md-divider class="info-card-divider"></md-divider>
+            <p class="info-card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur diam dui, vitae tincidunt neque feugiat bibendum.</p>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-actions class="info-card-actions" layout="row" layout-align="end center">
+
+        <span class="info-card-actions-text"><md-icon class="material-icons step">alarm</md-icon> {{row.date | date:"medium"}}</span>
+        <span class="info-card-actions-text">{{row.seen}} Updates</span>
+        <span class="info-card-actions-text" flex></span>
+        <md-button class="md-accent" aria-label="Settings">
+            <!--<md-icon aria-label="email" class="material-icons">book</md-icon>-->
+            More Info
+            <md-icon aria-label="more info" class="material-icons">chevron_right</md-icon>
+        </md-button>
+    </md-card-actions>
+</md-card>

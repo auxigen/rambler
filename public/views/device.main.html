@@ -1,0 +1,13 @@
+<md-content class="md-padding info-content" layout="column" flex layout-align="start center">
+    <md-card class="search-card info-card" layout-padding>
+        <md-input-container class="md-icon-float md-block search-card-input">
+            <!-- Use floating label instead of placeholder -->
+            <label>Search</label>
+            <md-icon aria-label="more info" class="material-icons">search</md-icon>
+        <input ng-model="user.name" type="text">
+        </md-input-container>
+    </md-card>
+    <div ui-view>
+        <a ui-sref=".results">Simulate Search</a>
+    </div>
+</md-content>

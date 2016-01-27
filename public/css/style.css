@@ -45,18 +45,92 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 48px;
-}
-
-.content {
-    background-color: #edecec;
-}
-
-md-card {
-    height: 215px;
-}
-
-.card-media {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
     overflow: hidden;
+}
+
+.content-container {
+    overflow-y: scroll;
+}
+
+.top-stats {
+    text-align: center;
+    margin: 10px 0px;
+    color: rgb(255,255,255) !important;
+    font-size: 14px;
+}
+
+.top-stats-left {
+    border-right: 1px solid rgba(255,255,255,0.25);
+}
+
+.top-stats h3, .top-stats p {
+    margin: 0px;
+}
+
+.top-stats h3 {
+    margin: 10px 0px 3px 0px;
+}
+
+.top-stats p {
+    margin: 3px 0px 10px 0px;
+}
+
+.search-card {
+    padding: 0px 8px;
+}
+
+.search-card-input {
+    margin: 18px 0 0px 0px;
+}
+
+.info-content {
+    background-color: transparent;
+}
+
+.info-card {
+    width: 600px;
+    min-width: 460px;
+}
+
+.info-card-title {
+    padding: 0px;
+}
+
+.info-card-title-text {
+    padding: 10px;
+}
+
+.info-card-title-media {
+    margin: 0px;
+    padding: 0px;
+}
+
+.info-card-media {
+    overflow: hidden;
+    padding: 0px;
+}
+
+.info-card-divider {
+    margin: 10px 20px 10px 0px;
+}
+
+.info-card-actions {
+    background-color: #edecec;
+    margin: 0px;
+}
+
+.info-card-body {
+    font-size: 14px;
+    margin: 0px;
+}
+
+.info-card-actions-text {
+    line-height: 36px;
+    height: 36px;
+    font-size: 14px;
+    align-items: center;
+    padding: 0 15px;
+    border-right: 1px solid #E0E0E0;
 }

@@ -24,6 +24,7 @@ var port = process.env.PORT || 8080; // set our port
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://' + mongoUser + ':' + mongoPass + '@' + mongoURL + ':' + mongoPort + '/rambler');
+
 var Tweet = require('./models/tweet.js');
 
 var db = mongoose.connection;
@@ -32,7 +33,7 @@ db.once('open', function() {
   console.log('Successfully connected to mongo')
 });
 
-
+/*
 var client = new Twitter({
   consumer_key: process.env.TWITTER_CONSUMER_KEY || "",
   consumer_secret: process.env.TWITTER_CONSUMER_SECRET || "",
@@ -64,9 +65,7 @@ client.stream('statuses/filter', { locations: '-180,-90,180,90' }, function(stre
         throw error;
     });
 });
-
-console.log(client);
-
+*/
 // START THE SERVER
 // =============================================================================
 app.listen(port);
